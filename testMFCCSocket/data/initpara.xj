@@ -1,0 +1,112 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<calalog>
+  <!--主板编号-->
+  <board name="A">
+    <id>123456789</id>
+  </board>
+  <!--机车编号-->
+  <locomotive>
+    <number>CRH380-0201</number>
+  </locomotive>
+  <!--受电弓编号-->
+  <pantograph>
+    <number>1</number>
+  </pantograph>
+  <!--地面中心告警状态服务-->
+  <remote connect="0">
+    <ip>192.168.0.66</ip>
+    <port>8088</port>
+    <period>60</period>
+  </remote>
+  <!--地面中心推流服务-->
+  <remotepush connect="0">
+    <ip>192.168.0.66</ip>
+    <port>9007</port>
+  </remotepush>
+  <local>
+    <!--本机对地面中心IP地址-->
+    <outip>192.168.1.2</outip>
+    <!--本机对摄像头IP地址-->
+    <innerip>192.168.2.3</innerip>
+    <!--配套的另一块板子的IP-->
+    <pairip>192.168.0.88</pairip>
+    <!--高频相机参数，暂存相机IP地址-->
+    <highFreqCameraPara>admin2</highFreqCameraPara>
+    <!--红外相机参数，暂存相机IP地址-->
+    <infraCameraPara>192.168.5.99</infraCameraPara>
+    <!--全景相机参数，标识相机名-->
+    <allviewCameraPara>admin1</allviewCameraPara>
+    <!--外设串口GPS-->
+    <serialPortPeripGps>192.168.2.99</serialPortPeripGps>
+    <!--外设串口温度-->
+    <serialPortPeripWendu>1</serialPortPeripWendu>
+    <!--电源通信端口-->
+    <powerCommNo>1</powerCommNo>
+    <!--500万摄像机子码流地址-->
+    <url500Camera>rtsp://admin:admin123@192.168.0.90:554/h264/ch1/sub/av_stream</url500Camera>
+    <!--拉弧脉冲最大间隔时间-->
+    <ultravioletLahuInternal>5</ultravioletLahuInternal>
+    <!--给测试用，选择哪一个高频类-->
+    <serNoHighFreq>1</serNoHighFreq>
+    <!--是否上传报警等信息-->
+    <bUploadAlarm>1</bUploadAlarm>
+    <!--本机关机超时时间,单位秒-->
+    <localShutDownTime>60</localShutDownTime>
+    <!--电源关机超时时间,单位分-->
+    <powerShutDownTime>2</powerShutDownTime>
+  </local>
+  <CameraSet>
+        <CameHighTrig>1</CameHighTrig>
+        <CamePanoTrig>1</CamePanoTrig>
+        <CameHighExpo>2000</CameHighExpo>
+        <CamePanoExpo>2000</CamePanoExpo>
+        <CameHighGain>2</CameHighGain>
+        <CamePanoGain>2</CamePanoGain>
+        <CameHighEdge>1</CameHighEdge>
+        <CamePanoEdge>0</CamePanoEdge>
+   </CameraSet>
+  <alarm>
+    <!--导高报警区域-->
+    <daogao>
+      <min>5400</min>
+      <max>5700</max>
+    </daogao>
+    <!--拉弧报警时间-->
+    <ultravioletAlarm>5</ultravioletAlarm>
+    <!--拉出值报警区域-->
+    <lachu>
+      <max>700</max>
+      <min>-700</min>
+    </lachu>
+    <!--红外相机检测报警-->
+    <infraTemperature>3500</infraTemperature>
+  </alarm>
+  <!--数据库存放路径-->
+  <dbpath>d:</dbpath>
+  <!--另一磁盘路径-->
+  <path2add>e:</path2add>  
+  <sensors>
+    <!--温度计-->
+    <sensor id="1" exist="0" />
+    <!--导航-->
+    <sensor id="2" exist="0">
+      <!--广播IP-->
+      <broadcastip>192.168.0.255</broadcastip>
+    </sensor>
+    <!--紫外-->
+    <sensor id="3" exist="0">
+      <!--紫外IP地址，该地址和采集板地址对应，不能更改-->
+      <ip>192.168.0.91</ip>
+    </sensor>
+    <!--电源-->
+    <sensor id="4" exist="0"></sensor>
+    <!--闪光灯-->
+    <sensor id="5" exist="0" />
+    <!--红外相机-->
+    <sensor id="6" exist="0"></sensor>
+    <!--130万高频-->
+    <sensor id="7" exist="0"></sensor>
+    <!--200万全景-->
+    <sensor id="8" exist="0"></sensor>
+  </sensors>
+</calalog>

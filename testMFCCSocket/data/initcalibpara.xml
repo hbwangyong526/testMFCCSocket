@@ -1,0 +1,39 @@
+<!--可见光相机标定检测参数-->
+<Calibration>
+    <!--标定参数-->
+    <CalibrateValue>
+        <!--水平标定参数-->
+        <CalWidth RealVal="1950.000" PixelVal="668" KVal="2.919" />
+        <!--垂直标定参数-->
+        <CalHeight RealVal="341.000" PixelVal="128" KVal="2.664" />
+        <!--导高标定参数-->
+        <CalDaoGao RealVal="5400.000" PixelVal="727" />
+    </CalibrateValue>
+    <!--检测参数-->
+    <InspValue>
+        <!--左侧矩形坐标参数-->
+        <LeftRoi X1="300" X2="500" Y1="700" Y2="900" />
+        <!--右侧矩形坐标参数-->
+        <RightRoi X1="820" X2="1020" Y1="690" Y2="890" />
+        <!--检测框数参数-->
+        <RoiRectNum UpNum="7" DownNum="8" />
+        <!--横梁高度参数-->
+        <HengLiang HL1="15" HL2="17" />
+        <!--受电弓2尺寸参数-->
+        <ShouDG SDG2_Width="668" SDG2_Height="80" />
+        <!--其它检测参数-->
+        <Other>
+            <!--相对位置检测参数-->
+            <SDG12Diff SDG12_Diff="48" />
+        </Other>
+    </InspValue>
+    <!--显示参数-->
+    <DispValue>
+        <!--图像最高点参数-->
+        <RealImageHigh>7336.728</RealImageHigh>
+        <!--图像最低点参数-->
+        <RealImageLow>4608.792</RealImageLow>
+        <!--受电弓2宽度参数-->
+        <RealSDG2Width>1949.892</RealSDG2Width>
+    </DispValue>
+</Calibration>
